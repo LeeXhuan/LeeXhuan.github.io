@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="NVM,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="LeeXhuan-Blogs">
-<meta property="og:url" content="https://leexhuan.github.io/index.html">
+<meta name="description" content="一. nvm是什么Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本 目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ru">
+<meta name="keywords" content="NVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NVM 使用相关说明">
+<meta property="og:url" content="https://leexhuan.github.io/2019/03/21/NVM-使用相关说明/index.html">
 <meta property="og:site_name" content="LeeXhuan-Blogs">
+<meta property="og:description" content="一. nvm是什么Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本 目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ru">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-21T07:28:06.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeeXhuan-Blogs">
+<meta name="twitter:title" content="NVM 使用相关说明">
+<meta name="twitter:description" content="一. nvm是什么Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本 目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ru">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://leexhuan.github.io/">
+  <link rel="canonical" href="https://leexhuan.github.io/2019/03/21/NVM-使用相关说明/">
 
 
 
 
 
-  <title>LeeXhuan-Blogs</title>
+  <title>NVM 使用相关说明 | LeeXhuan-Blogs</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,9 +288,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -316,9 +320,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/21/NVM-使用相关说明/" itemprop="url">NVM 使用相关说明</a></h1>
+          <h1 class="post-title" itemprop="name headline">NVM 使用相关说明</h1>
         
 
         <div class="post-meta">
@@ -368,9 +370,7 @@
       
 
       
-        
-          
-            <h1 id="一-nvm是什么"><a href="#一-nvm是什么" class="headerlink" title="一. nvm是什么"></a>一. nvm是什么</h1><p>Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本</p>
+        <h1 id="一-nvm是什么"><a href="#一-nvm是什么" class="headerlink" title="一. nvm是什么"></a>一. nvm是什么</h1><p>Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本</p>
 <p>目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。</p>
 <p>nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。</p>
 <p>我按nvm提供的文档来完成nvm及node多个版本的安装,因为在安装过程中遇到不少坑,特在此总结安装中遇到的各种坑</p>
@@ -412,8 +412,6 @@
 <h2 id="在配置文件-npmrc-文件写入源地址"><a href="#在配置文件-npmrc-文件写入源地址" class="headerlink" title=" 在配置文件 ~/.npmrc 文件写入源地址"></a><3> 在配置文件 ~/.npmrc 文件写入源地址</3></h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.npmrc   <span class="comment">//打开配置文件</span></span><br><span class="line">registry =https:<span class="comment">//registry.npm.taobao.org   //写入配置文件</span></span><br><span class="line"></span><br><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line">npm install -g cnpm --registry=http:<span class="comment">//r.cnpmjs.org</span></span><br></pre></td></tr></table></figure>
 <h1 id="三-使用node启动项目"><a href="#三-使用node启动项目" class="headerlink" title="三.使用node启动项目"></a>三.使用node启动项目</h1><p>npm i （npm install 的简写）安装依赖时候，后面加上 -d可以看到文件安装进程和状态<br>若安装文件中出现状态304且报错，直接去D:\NodeNVM\npm-cache中，将缓存文件全部删除</p>
 
-          
-        
       
     </div>
     
@@ -428,133 +426,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://leexhuan.github.io/2019/03/21/hello-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LeeXhuan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeeXhuan-Blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/21/hello-hexo/" itemprop="url">你好，HEXO</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T11:50:56+08:00">
-                2019-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/NVM/" rel="tag"># NVM</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          
-        
-      
-    </div>
-    
-    
-    
+              <a href="/2019/03/21/hello-hexo/" rel="next" title="你好，HEXO">
+                <i class="fa fa-chevron-left"></i> 你好，HEXO
+              </a>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -564,10 +465,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -575,6 +477,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -595,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -649,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一-nvm是什么"><span class="nav-number">1.</span> <span class="nav-text">一. nvm是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-下载安装与使用"><span class="nav-number">2.</span> <span class="nav-text">二. 下载安装与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#nvm-下载"><span class="nav-number">2.1.</span> <span class="nav-text">  nvm 下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nvm-安装"><span class="nav-number">2.2.</span> <span class="nav-text">  nvm 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nvm-环境变量配置"><span class="nav-number">2.3.</span> <span class="nav-text"> nvm 环境变量配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nvm基本操作"><span class="nav-number">2.4.</span> <span class="nav-text"> nvm基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装node"><span class="nav-number">2.5.</span> <span class="nav-text"> 安装node</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二-安装-cnpm"><span class="nav-number">3.</span> <span class="nav-text">二. 安装 cnpm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-config-配置指向国内镜像源"><span class="nav-number">3.1.</span> <span class="nav-text"> 通过 config 配置指向国内镜像源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-npm-命令指定下载源"><span class="nav-number">3.2.</span> <span class="nav-text"> 通过 npm 命令指定下载源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在配置文件-npmrc-文件写入源地址"><span class="nav-number">3.3.</span> <span class="nav-text"> 在配置文件 ~/.npmrc 文件写入源地址</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三-使用node启动项目"><span class="nav-number">4.</span> <span class="nav-text">三.使用node启动项目</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -777,6 +708,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一款Windows环境下非常简洁美观易用的cmd替代者，它支持了大部分的Linux命令。支持ssh连接linux，使用起来非常方便。比起cmd、powershell、conEmu，其界面美观简洁，功能强大。">
+<meta name="description" content="Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;C:">
 <meta name="keywords" content="Cmder">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cmder安装笔记">
 <meta property="og:url" content="https://leexhuan.github.io/2019/03/21/cmder/index.html">
 <meta property="og:site_name" content="优 雅">
-<meta property="og:description" content="一款Windows环境下非常简洁美观易用的cmd替代者，它支持了大部分的Linux命令。支持ssh连接linux，使用起来非常方便。比起cmd、powershell、conEmu，其界面美观简洁，功能强大。">
+<meta property="og:description" content="Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;C:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-22T01:25:55.148Z">
+<meta property="og:updated_time" content="2019-03-22T06:15:15.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cmder安装笔记">
-<meta name="twitter:description" content="一款Windows环境下非常简洁美观易用的cmd替代者，它支持了大部分的Linux命令。支持ssh连接linux，使用起来非常方便。比起cmd、powershell、conEmu，其界面美观简洁，功能强大。">
+<meta name="twitter:description" content="Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;C:">
 
 
 
@@ -371,10 +371,6 @@
           
 
           
-              <div class="post-description">
-                  一款Windows环境下非常简洁美观易用的cmd替代者，它支持了大部分的Linux命令。支持ssh连接linux，使用起来非常方便。比起cmd、powershell、conEmu，其界面美观简洁，功能强大。
-              </div>
-          
 
         </div>
       </header>
@@ -391,6 +387,7 @@
       
         <h1 id="Cmder安装笔记"><a href="#Cmder安装笔记" class="headerlink" title="Cmder安装笔记"></a>Cmder安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder快捷键</a></p>
 <h1 id="右键管理"><a href="#右键管理" class="headerlink" title="右键管理"></a>右键管理</h1><h2 id="添加（方法一）"><a href="#添加（方法一）" class="headerlink" title="添加（方法一）"></a>添加（方法一）</h2><p>下载注册表文件<a href="https://gist.githubusercontent.com/AWMooreCO/f1e2457f66ceb41efdf7/raw/01679ce047451aa8f1ca8497e02ca64fa87350f6/cmder_context_enable.reg" target="_blank" rel="noopener">cmder_context_enable.reg</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%V\""</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%1\""</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>修改注册表中程序目录地址</p>
 <p>运行注册表</p>
 <h2 id="添加（方法二）"><a href="#添加（方法二）" class="headerlink" title="添加（方法二）"></a>添加（方法二）</h2><p>1、把 Cmder 加到环境变量</p>
@@ -508,7 +505,7 @@
               <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4" alt="LeeXhuan">
             
               <p class="site-author-name" itemprop="name">LeeXhuan</p>
-              <p class="site-description motion-element" itemprop="description">一位优雅的程序员</p>
+              <p class="site-description motion-element" itemprop="description">一名优雅的程序员</p>
           </div>
 
           <nav class="site-state motion-element">

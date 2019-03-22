@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。">
+<meta name="description" content="一. nvm是什么Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本 目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ru">
 <meta name="keywords" content="NVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NVM 使用相关说明">
 <meta property="og:url" content="https://leexhuan.github.io/2019/02/21/NVM-使用相关说明/index.html">
 <meta property="og:site_name" content="优 雅">
-<meta property="og:description" content="Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。">
+<meta property="og:description" content="一. nvm是什么Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本 目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ru">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-22T01:31:08.943Z">
+<meta property="og:updated_time" content="2019-03-22T06:16:31.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NVM 使用相关说明">
-<meta name="twitter:description" content="Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。">
+<meta name="twitter:description" content="一. nvm是什么Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本 目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ru">
 
 
 
@@ -371,10 +371,6 @@
           
 
           
-              <div class="post-description">
-                  Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本，nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。
-              </div>
-          
 
         </div>
       </header>
@@ -392,7 +388,7 @@
         <h1 id="一-nvm是什么"><a href="#一-nvm是什么" class="headerlink" title="一. nvm是什么"></a>一. nvm是什么</h1><p>Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本</p>
 <p>目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。</p>
 <p>nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。</p>
-<p>我按nvm提供的文档来完成nvm及node多个版本的安装,因为在安装过程中遇到不少坑,特在此总结安装中遇到的各种坑</p>
+<p>我按nvm提供的文档来完成nvm及node多个版本的安装,因为在安装过程中遇到不少坑,特在此总结安装中遇到的各种坑<br><a id="more"></a></p>
 <h1 id="二-下载安装与使用"><a href="#二-下载安装与使用" class="headerlink" title="二. 下载安装与使用"></a>二. 下载安装与使用</h1><h2 id="nvm-下载"><a href="#nvm-下载" class="headerlink" title="  nvm 下载"></a><1>  nvm 下载</1></h2><p>nvm-windows下载地址：nvm-windows<br>选择第一个 nvm-noinstall.zip ，然后解压在系统盘（建议放D盘）。我放的目录路径是D:\NodeNVM\nvm。解压出来的文件有：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+  elevate.cmd</span><br><span class="line">+  elevate.vbs</span><br><span class="line">+  install.cmd</span><br><span class="line">+  LICENSE</span><br><span class="line">+  nvm.exe</span><br></pre></td></tr></table></figure></p>
 <p>备注：windows下要设置显示文件类型的扩展名，这样才能看到上述文件的后缀</p>
 <h2 id="nvm-安装"><a href="#nvm-安装" class="headerlink" title="  nvm 安装"></a><2>  nvm 安装</2></h2><p>双击 install.cmd ，是以控制台形式显示的，第一下直接按回车，然后会在d盘根目录产生settings.txt，把这个文件放进刚刚解压的那个目录，然后修改settings.txt内容，改成如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root: D:\NodeNVM\nvm </span><br><span class="line">path: D:\NodeNVM\nodejs </span><br><span class="line">arch: <span class="number">64</span> </span><br><span class="line">proxy: none</span><br></pre></td></tr></table></figure></p>
@@ -541,7 +537,7 @@
               <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4" alt="LeeXhuan">
             
               <p class="site-author-name" itemprop="name">LeeXhuan</p>
-              <p class="site-description motion-element" itemprop="description">一位优雅的程序员</p>
+              <p class="site-description motion-element" itemprop="description">一名优雅的程序员</p>
           </div>
 
           <nav class="site-state motion-element">

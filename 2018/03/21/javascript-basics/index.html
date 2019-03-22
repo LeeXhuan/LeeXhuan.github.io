@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="总结一些前端基础的知识，有些知识可能在前端面试的时候会问到，所以做个记录，也有助于其他人查看，如果有什么问题，可以指出，会积极修正">
+<meta name="description" content="二、JavaScript基础1、javascript的typeof返回哪些数据类型 object number function boolean underfind string  12345678typeof null;//objecttypeof isNaN;//functiontypeof isNaN(123);//booleantypeof [];//object Array.isArra">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript基础面试题">
 <meta property="og:url" content="https://leexhuan.github.io/2018/03/21/javascript-basics/index.html">
 <meta property="og:site_name" content="优 雅">
-<meta property="og:description" content="总结一些前端基础的知识，有些知识可能在前端面试的时候会问到，所以做个记录，也有助于其他人查看，如果有什么问题，可以指出，会积极修正">
+<meta property="og:description" content="二、JavaScript基础1、javascript的typeof返回哪些数据类型 object number function boolean underfind string  12345678typeof null;//objecttypeof isNaN;//functiontypeof isNaN(123);//booleantypeof [];//object Array.isArra">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-22T01:29:06.184Z">
+<meta property="og:updated_time" content="2019-03-22T06:17:21.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础面试题">
-<meta name="twitter:description" content="总结一些前端基础的知识，有些知识可能在前端面试的时候会问到，所以做个记录，也有助于其他人查看，如果有什么问题，可以指出，会积极修正">
+<meta name="twitter:description" content="二、JavaScript基础1、javascript的typeof返回哪些数据类型 object number function boolean underfind string  12345678typeof null;//objecttypeof isNaN;//functiontypeof isNaN(123);//booleantypeof [];//object Array.isArra">
 
 
 
@@ -371,10 +371,6 @@
           
 
           
-              <div class="post-description">
-                  总结一些前端基础的知识，有些知识可能在前端面试的时候会问到，所以做个记录，也有助于其他人查看，如果有什么问题，可以指出，会积极修正
-              </div>
-          
 
         </div>
       </header>
@@ -397,17 +393,22 @@
 <li>强制（<code>parseInt</code>,<code>parseFloat</code>,<code>Number()</code>）</li>
 <li>隐式（<code>==</code>）<ul>
 <li><code>1==”1”//true</code></li>
-<li><code>null==undefined//true</code><h3 id="3、split-join-的区别"><a href="#3、split-join-的区别" class="headerlink" title="3、split() join() 的区别"></a>3、<code>split()</code> <code>join()</code> 的区别</h3></li>
+<li><code>null==undefined//true</code></li>
 </ul>
 </li>
+</ul>
+<h3 id="3、split-join-的区别"><a href="#3、split-join-的区别" class="headerlink" title="3、split() join() 的区别"></a>3、<code>split()</code> <code>join()</code> 的区别</h3><ul>
 <li>split是切割成数组的形式，</li>
-<li>join是将数组转换成字符串<h3 id="4、数组方法pop-push-unshift-shift"><a href="#4、数组方法pop-push-unshift-shift" class="headerlink" title="4、数组方法pop() push() unshift() shift()"></a>4、数组方法<code>pop()</code> <code>push()</code> <code>unshift()</code> <code>shift()</code></h3></li>
+<li>join是将数组转换成字符串</li>
+</ul>
+<a id="more"></a>
+<h3 id="4、数组方法pop-push-unshift-shift"><a href="#4、数组方法pop-push-unshift-shift" class="headerlink" title="4、数组方法pop() push() unshift() shift()"></a>4、数组方法<code>pop()</code> <code>push()</code> <code>unshift()</code> <code>shift()</code></h3><ul>
 <li><code>push()</code>尾部添加 </li>
 <li><code>pop()</code>尾部删除</li>
 <li><code>unshift()</code>头部添加</li>
-<li><code>shift()</code>头部删除<h3 id="5、事件绑定和普通事件有什么区别"><a href="#5、事件绑定和普通事件有什么区别" class="headerlink" title="5、事件绑定和普通事件有什么区别"></a>5、事件绑定和普通事件有什么区别</h3>传统事件绑定和符合W3C标准的事件绑定有什么区别？<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div1.onclick=function()&#123;&#125;;</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>  <span class="attr">onmouseover</span>=<span class="string">””</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
+<li><code>shift()</code>头部删除</li>
 </ul>
+<h3 id="5、事件绑定和普通事件有什么区别"><a href="#5、事件绑定和普通事件有什么区别" class="headerlink" title="5、事件绑定和普通事件有什么区别"></a>5、事件绑定和普通事件有什么区别</h3><p>传统事件绑定和符合W3C标准的事件绑定有什么区别？<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">div1.onclick=function()&#123;&#125;;</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>  <span class="attr">onmouseover</span>=<span class="string">””</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <ol>
 <li>如果说给同一个元素绑定了两次或者多次相同类型的事件，那么后面的绑定会覆盖前面的绑定</li>
 <li>不支持DOM事件流 事件捕获阶段目标元素阶段=&gt;事件冒泡阶段</li>
@@ -680,7 +681,7 @@
               <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4" alt="LeeXhuan">
             
               <p class="site-author-name" itemprop="name">LeeXhuan</p>
-              <p class="site-description motion-element" itemprop="description">一位优雅的程序员</p>
+              <p class="site-description motion-element" itemprop="description">一名优雅的程序员</p>
           </div>
 
           <nav class="site-state motion-element">

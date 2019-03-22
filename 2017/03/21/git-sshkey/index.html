@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="由于本地`Git`仓库和`GitHub`仓库之间的传输是通过`SSH`加密的，所以必须要让`github`仓库认证你`SSH key`，在此之前，必须要生成`SSH key`">
+<meta name="description" content="Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key  第1步：创建SSH Key。   在windows下查看c盘-&amp;gt;用户-&amp;gt;自己的用户名-&amp;gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控">
 <meta name="keywords" content="SSH-key">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 中 SSH key 生成步骤">
 <meta property="og:url" content="https://leexhuan.github.io/2017/03/21/git-sshkey/index.html">
 <meta property="og:site_name" content="优 雅">
-<meta property="og:description" content="由于本地`Git`仓库和`GitHub`仓库之间的传输是通过`SSH`加密的，所以必须要让`github`仓库认证你`SSH key`，在此之前，必须要生成`SSH key`">
+<meta property="og:description" content="Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key  第1步：创建SSH Key。   在windows下查看c盘-&amp;gt;用户-&amp;gt;自己的用户名-&amp;gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-22T01:28:43.489Z">
+<meta property="og:updated_time" content="2019-03-22T06:15:30.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 中 SSH key 生成步骤">
-<meta name="twitter:description" content="由于本地`Git`仓库和`GitHub`仓库之间的传输是通过`SSH`加密的，所以必须要让`github`仓库认证你`SSH key`，在此之前，必须要生成`SSH key`">
+<meta name="twitter:description" content="Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key  第1步：创建SSH Key。   在windows下查看c盘-&amp;gt;用户-&amp;gt;自己的用户名-&amp;gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控">
 
 
 
@@ -371,10 +371,6 @@
           
 
           
-              <div class="post-description">
-                  由于本地`Git`仓库和`GitHub`仓库之间的传输是通过`SSH`加密的，所以必须要让`github`仓库认证你`SSH key`，在此之前，必须要生成`SSH key`
-              </div>
-          
 
         </div>
       </header>
@@ -397,7 +393,7 @@
 <p>  密钥类型可以用 <code>-t</code> 选项指定。如果没有指定则默认生成用于<code>SSH-2</code>的<code>RSA</code>密钥。这里使用的是<code>rsa</code>。</p>
 <p>  同时在密钥中有一个注释字段，用<code>-C</code>来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息。所以在这里输入自己的邮箱或者其他都行。</p>
 <p>  输入完毕后程序同时要求输入一个密语字符串(<code>passphrase</code>)，空表示没有密语。接着会让输入2次口令(<code>password</code>)，空表示没有口令。3次回车即可完成当前步骤，此时<code>c盘&gt;用户&gt;自己的用户名&gt;.ssh</code>目录下已经生成好了。</p>
-</li>
+<a id="more"></a></li>
 <li><p>第2步：登录<code>github</code>。</p>
 <p>   打开<code>setting</code>-&gt;<code>SSH keys</code>，点击右上角 <code>New SSH key</code>，把生成好的公钥<code>id_rsa.pub</code>放进 <code>key</code>输入框中，再为当前的<code>key</code>起一个<code>title</code>来区分每个<code>key</code>。</p>
 </li>
@@ -514,7 +510,7 @@
               <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4" alt="LeeXhuan">
             
               <p class="site-author-name" itemprop="name">LeeXhuan</p>
-              <p class="site-description motion-element" itemprop="description">一位优雅的程序员</p>
+              <p class="site-description motion-element" itemprop="description">一名优雅的程序员</p>
           </div>
 
           <nav class="site-state motion-element">

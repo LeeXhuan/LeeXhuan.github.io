@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;C:">
+<meta name="description" content="Cmder 安装笔记Cmder 快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;">
 <meta name="keywords" content="Cmder">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cmder安装笔记">
+<meta property="og:title" content="Cmder 安装笔记">
 <meta property="og:url" content="https://leexhuan.github.io/2019/03/21/cmder/index.html">
 <meta property="og:site_name" content="优 雅">
-<meta property="og:description" content="Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;C:">
+<meta property="og:description" content="Cmder 安装笔记Cmder 快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-22T09:02:13.441Z">
+<meta property="og:updated_time" content="2019-03-25T02:59:13.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cmder安装笔记">
-<meta name="twitter:description" content="Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;C:">
+<meta name="twitter:title" content="Cmder 安装笔记">
+<meta name="twitter:description" content="Cmder 安装笔记Cmder 快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]  @=&quot;Open in Cmder&quot;  &quot;Icon&quot;=&quot;">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Cmder安装笔记 | 优 雅</title>
+  <title>Cmder 安装笔记 | 优 雅</title>
   
 
 
@@ -313,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Cmder安装笔记</h1>
+          <h1 class="post-title" itemprop="name headline">Cmder 安装笔记</h1>
         
 
         <div class="post-meta">
@@ -385,16 +385,16 @@
       
 
       
-        <h1 id="Cmder安装笔记"><a href="#Cmder安装笔记" class="headerlink" title="Cmder安装笔记"></a>Cmder安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder快捷键</a></p>
+        <h1 id="Cmder-安装笔记"><a href="#Cmder-安装笔记" class="headerlink" title="Cmder 安装笔记"></a>Cmder 安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder 快捷键</a></p>
 <h1 id="右键管理"><a href="#右键管理" class="headerlink" title="右键管理"></a>右键管理</h1><h2 id="添加（方法一）"><a href="#添加（方法一）" class="headerlink" title="添加（方法一）"></a>添加（方法一）</h2><p>下载注册表文件<a href="https://gist.githubusercontent.com/AWMooreCO/f1e2457f66ceb41efdf7/raw/01679ce047451aa8f1ca8497e02ca64fa87350f6/cmder_context_enable.reg" target="_blank" rel="noopener">cmder_context_enable.reg</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%V\""</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%1\""</span></span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>修改注册表中程序目录地址</p>
 <p>运行注册表</p>
 <h2 id="添加（方法二）"><a href="#添加（方法二）" class="headerlink" title="添加（方法二）"></a>添加（方法二）</h2><p>1、把 Cmder 加到环境变量</p>
-<p>把Cmder.exe存放的目录添加到系统环境变量；加完之后,Win+r一下输入cmder,即可。</p>
-<p>2、添加 cmder 到右键菜单：环境变量添加后，在任意文件夹中即可打开Cmder，上一步的把 Cmder 加到环境变量就是为此服务的, 在管理员权限的终端输入以下语句即可:</p>
+<p>把 Cmder.exe 存放的目录添加到系统环境变量；加完之后, Win+r 一下输入 cmder ,即可。</p>
+<p>2、添加 cmder 到右键菜单：环境变量添加后，在任意文件夹中即可打开 Cmder，上一步的把 Cmder 加到环境变量就是为此服务的, 在管理员权限的终端输入以下语句即可:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cmder.exe /REGISTER ALL</span><br></pre></td></tr></table></figure>
-<p>3、为Cmder.exe创建快捷方式，右击Cmder.exe选择“创建快捷方式”点击即可，以后打开Cmder.exe只要点击桌面对应的快捷方式即可</p>
+<p>3、为 Cmder.exe 创建快捷方式，右击 Cmder.exe 选择“创建快捷方式”点击即可，以后打开 Cmder.exe 只要点击桌面对应的快捷方式即可</p>
 <h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>下载注册表文件<a href="https://gist.githubusercontent.com/AWMooreCO/f1e2457f66ceb41efdf7/raw/01679ce047451aa8f1ca8497e02ca64fa87350f6/cmder_context_disable.reg" target="_blank" rel="noopener">cmder_context_disable.reg</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[-HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]</span><br><span class="line">[-HKEY_CLASSES_ROOT\Directory\shell\cmder]</span><br></pre></td></tr></table></figure></p>
 <p>运行注册表</p>
 <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>中文乱码: 进入<code>Settings&gt;Startup&gt;Environment</code>,添加<code>chcp 65001</code>变更为<code>utf-8</code>.重启即可</p>
@@ -541,7 +541,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -574,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cmder安装笔记"><span class="nav-number">1.</span> <span class="nav-text">Cmder安装笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#右键管理"><span class="nav-number">2.</span> <span class="nav-text">右键管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加（方法一）"><span class="nav-number">2.1.</span> <span class="nav-text">添加（方法一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加（方法二）"><span class="nav-number">2.2.</span> <span class="nav-text">添加（方法二）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除"><span class="nav-number">2.3.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">2.4.</span> <span class="nav-text">常见问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cmder-安装笔记"><span class="nav-number">1.</span> <span class="nav-text">Cmder 安装笔记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#右键管理"><span class="nav-number">2.</span> <span class="nav-text">右键管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加（方法一）"><span class="nav-number">2.1.</span> <span class="nav-text">添加（方法一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加（方法二）"><span class="nav-number">2.2.</span> <span class="nav-text">添加（方法二）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除"><span class="nav-number">2.3.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">2.4.</span> <span class="nav-text">常见问题</span></a></li></ol></li></ol></div>
             
 
           </div>

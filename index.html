@@ -338,6 +338,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/使用说明/" itemprop="url" rel="index">
+                    <span itemprop="name">使用说明</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -366,7 +388,7 @@
 
       
         
-          <h2 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo <span class="keyword">new</span> <span class="string">"a new post"</span>  新建文章，最好用双引号括起来</span><br><span class="line"></span><br><span class="line">hexo g == hexo generate     生成静态文件到public文件夹</span><br><span class="line"></span><br><span class="line">hexo s == hexo server    Server at localhost:<span class="number">4000</span>，根目录为public</span><br><span class="line"></span><br><span class="line">hexo d == hexo deploy   部署到远程服务里，例如github</span><br><span class="line"></span><br><span class="line">hexo p == hexo publish  新建草稿draft</span><br><span class="line"></span><br><span class="line">hexo clean     清除缓存文件</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"about"</span>   生成 /source/about/index.md 文件</span><br></pre></td></tr></table></figure>
+          <h2 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo <span class="keyword">new</span> <span class="string">"a new post"</span>  新建文章，最好用双引号括起来</span><br><span class="line"></span><br><span class="line">hexo g == hexo generate     生成静态文件到 public 文件夹</span><br><span class="line"></span><br><span class="line">hexo s == hexo server    Server at localhost:<span class="number">4000</span>，根目录为 public</span><br><span class="line"></span><br><span class="line">hexo d == hexo deploy   部署到远程服务里，例如 github</span><br><span class="line"></span><br><span class="line">hexo p == hexo publish  新建草稿 draft</span><br><span class="line"></span><br><span class="line">hexo clean     清除缓存文件</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"about"</span>   生成 /source/about/index.md 文件</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/03/25/Hexo-常用命令笔记/#more" rel="contents">
@@ -512,10 +534,10 @@
 
       
         
-          <h1 id="一-nvm是什么"><a href="#一-nvm是什么" class="headerlink" title="一. nvm是什么"></a>一. nvm是什么</h1><p>Node版本的迭代速度很快，版本很多，不同项目对 node的依赖不同，故需要切换不同node版本</p>
-<p>目前有n和nvm这两个工具可以对Node进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n更加全面，n更有局限性。</p>
+          <h1 id="一-nvm是什么"><a href="#一-nvm是什么" class="headerlink" title="一. nvm是什么"></a>一. nvm是什么</h1><p>Node 版本的迭代速度很快，版本很多，不同项目对 node 的依赖不同，故需要切换不同 node 版本</p>
+<p>目前有 n 和 nvm 这两个工具可以对 Node 进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n 更加全面， n 更有局限性。</p>
 <p>nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。</p>
-<p>我按nvm提供的文档来完成nvm及node多个版本的安装,因为在安装过程中遇到不少坑,特在此总结安装中遇到的各种坑<br>
+<p>我按 nvm 提供的文档来完成 nvm 及 node 多个版本的安装,因为在安装过程中遇到不少坑,特在此总结安装中遇到的各种坑<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/03/21/NVM-使用相关说明/#more" rel="contents">
@@ -588,7 +610,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/21/cmder/" itemprop="url">Cmder安装笔记</a></h1>
+                <a class="post-title-link" href="/2019/03/21/cmder/" itemprop="url">Cmder 安装笔记</a></h1>
         
 
         <div class="post-meta">
@@ -661,7 +683,7 @@
 
       
         
-          <h1 id="Cmder安装笔记"><a href="#Cmder安装笔记" class="headerlink" title="Cmder安装笔记"></a>Cmder安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder快捷键</a></p>
+          <h1 id="Cmder-安装笔记"><a href="#Cmder-安装笔记" class="headerlink" title="Cmder 安装笔记"></a>Cmder 安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder 快捷键</a></p>
 <h1 id="右键管理"><a href="#右键管理" class="headerlink" title="右键管理"></a>右键管理</h1><h2 id="添加（方法一）"><a href="#添加（方法一）" class="headerlink" title="添加（方法一）"></a>添加（方法一）</h2><p>下载注册表文件<a href="https://gist.githubusercontent.com/AWMooreCO/f1e2457f66ceb41efdf7/raw/01679ce047451aa8f1ca8497e02ca64fa87350f6/cmder_context_enable.reg" target="_blank" rel="noopener">cmder_context_enable.reg</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%V\""</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%1\""</span></span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
           <div class="post-button text-center">
@@ -888,7 +910,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/21/sass-installation-and-use/" itemprop="url">sass安装笔记</a></h1>
+                <a class="post-title-link" href="/2019/03/21/sass-installation-and-use/" itemprop="url">Sass 安装笔记</a></h1>
         
 
         <div class="post-meta">
@@ -962,8 +984,8 @@
       
         
           <h2 id="环境的配置"><a href="#环境的配置" class="headerlink" title="环境的配置"></a>环境的配置</h2><ol>
-<li><p><a href="http://rubyinstaller.org/downloads" target="_blank" rel="noopener">下载Ruby</a></p>
-<p>安装在c盘  勾选</p>
+<li><p><a href="http://rubyinstaller.org/downloads" target="_blank" rel="noopener">下载 Ruby </a></p>
+<p>安装在 c 盘  勾选</p>
 <p>自动配置环境变量</p>
 <p>打开</p>
           <!--noindex-->
@@ -1112,10 +1134,13 @@
       
         
           <h1 id="1-什么是JQuery"><a href="#1-什么是JQuery" class="headerlink" title="1.什么是JQuery?"></a>1.什么是<code>JQuery</code>?</h1><ol>
-<li><code>JQuery</code>是一个优秀的<code>javascript</code>框架。</li>
-<li><code>JQuery</code>是继<code>Prototype</code>之后又一个优秀的<code>Javascript</code>框架。其宗旨是——<code>WRITE LESS,DO MORE</code>,写更少的代码,做更多的事情。它是轻量级的<code>js</code>库，这是其它的<code>js</code>库所不及的，它兼容<code>CSS3</code>，还兼容各种常用浏览器。</li>
-<li><code>JQuery</code>是一个快速的，简洁的<code>JavaScript</code>库，使用户能更方便地处理<code>HTMLdocuments</code>、<code>events</code>、实现动画效果，并且方便地为网站提供AJAX交互。</li>
-<li><code>JQuery</code>还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。<code>JQuery</code>能够使用户的<code>html</code>页保持代码和<code>html</code>内容分离，也就是说，不用再在<code>html</code>里面插入一堆<code>js</code>来调用命令了，只需定义<code>id</code>即可。
+<li><p><code>JQuery</code>是一个优秀的<code>javascript</code>框架。</p>
+</li>
+<li><p><code>JQuery</code>是继<code>Prototype</code>之后又一个优秀的<code>Javascript</code>框架。其宗旨是——<code>WRITE LESS,DO MORE</code>,写更少的代码,做更多的事情。它是轻量级的<code>js</code>库，这是其它的<code>js</code>库所不及的，它兼容<code>CSS3</code>，还兼容各种常用浏览器。</p>
+</li>
+<li><p><code>JQuery</code>是一个快速的，简洁的<code>JavaScript</code>库，使用户能更方便地处理<code>HTMLdocuments</code>、<code>events</code>、实现动画效果，并且方便地为网站提供 AJAX 交互。</p>
+</li>
+<li><p><code>JQuery</code>还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。<code>JQuery</code>能够使用户的<code>html</code>页保持代码和<code>html</code>内容分离，也就是说，不用再在<code>html</code>里面插入一堆<code>js</code>来调用命令了，只需定义<code>id</code>即可。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/03/21/jquery-merit-and-demerit/#more" rel="contents">
@@ -1188,7 +1213,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/21/javascript-basics/" itemprop="url">JavaScript基础面试题</a></h1>
+                <a class="post-title-link" href="/2019/03/21/javascript-basics/" itemprop="url">JavaScript 基础面试题</a></h1>
         
 
         <div class="post-meta">
@@ -1261,11 +1286,11 @@
 
       
         
-          <h1 id="二、JavaScript基础"><a href="#二、JavaScript基础" class="headerlink" title="二、JavaScript基础"></a>二、JavaScript基础</h1><h3 id="1、javascript的typeof返回哪些数据类型"><a href="#1、javascript的typeof返回哪些数据类型" class="headerlink" title="1、javascript的typeof返回哪些数据类型"></a>1、<code>javascript</code>的<code>typeof</code>返回哪些数据类型</h3><ul>
+          <h1 id="二、JavaScript-基础"><a href="#二、JavaScript-基础" class="headerlink" title="二、JavaScript 基础"></a>二、JavaScript 基础</h1><h3 id="1、javascript的typeof返回哪些数据类型"><a href="#1、javascript的typeof返回哪些数据类型" class="headerlink" title="1、javascript的typeof返回哪些数据类型"></a>1、<code>javascript</code>的<code>typeof</code>返回哪些数据类型</h3><ul>
 <li><code>object</code> <code>number</code> <code>function</code> <code>boolean</code> <code>underfind</code> <code>string</code>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>;<span class="comment">//object</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">isNaN</span>;<span class="comment">//function</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="built_in">isNaN</span>(<span class="number">123</span>);<span class="comment">//boolean</span></span><br><span class="line"><span class="keyword">typeof</span> [];<span class="comment">//object </span></span><br><span class="line"><span class="built_in">Array</span>.isArray(); <span class="comment">//es5</span></span><br><span class="line">toString.call([]);<span class="comment">//”[object Array]”</span></span><br><span class="line"><span class="keyword">var</span> arr=[];</span><br><span class="line">arr.constructor;<span class="comment">//Array</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="2、例举3种强制类型转换和2种隐式类型转换"><a href="#2、例举3种强制类型转换和2种隐式类型转换" class="headerlink" title="2、例举3种强制类型转换和2种隐式类型转换?"></a>2、例举3种强制类型转换和2种隐式类型转换?</h3><ul>
+<h3 id="2、例举-3-种强制类型转换和-2-种隐式类型转换"><a href="#2、例举-3-种强制类型转换和-2-种隐式类型转换" class="headerlink" title="2、例举 3 种强制类型转换和 2 种隐式类型转换?"></a>2、例举 3 种强制类型转换和 2 种隐式类型转换?</h3><ul>
 <li>强制（<code>parseInt</code>,<code>parseFloat</code>,<code>Number()</code>）</li>
 <li>隐式（<code>==</code>）<ul>
 <li><code>1==”1”//true</code></li>
@@ -1274,8 +1299,8 @@
 </li>
 </ul>
 <h3 id="3、split-join-的区别"><a href="#3、split-join-的区别" class="headerlink" title="3、split() join() 的区别"></a>3、<code>split()</code> <code>join()</code> 的区别</h3><ul>
-<li>split是切割成数组的形式，</li>
-<li>join是将数组转换成字符串</li>
+<li>split 是切割成数组的形式</li>
+<li>join 是将数组转换成字符串</li>
 </ul>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1349,7 +1374,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/03/21/html-css/" itemprop="url">HTML和CSS面试题</a></h1>
+                <a class="post-title-link" href="/2019/03/21/html-css/" itemprop="url">HTML 和 CSS 面试题</a></h1>
         
 
         <div class="post-meta">
@@ -1422,14 +1447,14 @@
 
       
         
-          <h1 id="一、HTML和CSS"><a href="#一、HTML和CSS" class="headerlink" title="一、HTML和CSS"></a>一、HTML和CSS</h1><h3 id="1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么"><a href="#1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么" class="headerlink" title="1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?"></a>1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</h3><ul>
-<li>IE: trident内核</li>
-<li>Firefox：gecko内核</li>
-<li>Safari:webkit内核</li>
-<li>Opera:以前是presto内核，Opera现已改用Google Chrome的Blink内核</li>
-<li>Chrome:Blink(基于webkit，Google与Opera Software共同开发)</li>
+          <h1 id="一、HTML-和-CSS"><a href="#一、HTML-和-CSS" class="headerlink" title="一、HTML 和 CSS"></a>一、HTML 和 CSS</h1><h3 id="1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么"><a href="#1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么" class="headerlink" title="1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?"></a>1、你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</h3><ul>
+<li>IE: trident 内核</li>
+<li>Firefox：gecko 内核</li>
+<li>Safari: webkit 内核</li>
+<li>Opera: 以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核</li>
+<li>Chrome: Blink (基于 webkit， Google 与 Opera Software 共同开发)</li>
 </ul>
-<h3 id="2、每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？"><a href="#2、每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？" class="headerlink" title="2、每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？"></a>2、每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？</h3><ul>
+<h3 id="2、每个-HTML-文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？"><a href="#2、每个-HTML-文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？" class="headerlink" title="2、每个 HTML 文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？"></a>2、每个 HTML 文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？严格模式与混杂模式的区别？</h3><ul>
 <li><code>&lt;!DOCTYPE&gt;</code> 声明位于文档中的最前面，处于 <code>&lt;html&gt;</code> 标签之前。告知浏览器的解析器，用什么文档类型规范来解析这个文档。 </li>
 <li>严格模式的排版和 <code>JS</code> 运作模式是以该浏览器支持的最高标准运行。</li>
 <li>在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</li>
@@ -1664,7 +1689,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

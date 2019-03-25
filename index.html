@@ -366,11 +366,14 @@
 
       
         
-          
-            <h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line">npm update -g hexo</span><br><span class="line">hexo init</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">hexo n == hexo <span class="keyword">new</span> <span class="string">"a new post"</span>  新建文章，最好用双引号括起来</span><br><span class="line"></span><br><span class="line">hexo g == hexo generate     生成静态文件到public文件夹</span><br><span class="line"></span><br><span class="line">hexo s == hexo server    Server at localhost:<span class="number">4000</span>，根目录为public</span><br><span class="line"></span><br><span class="line">hexo d == hexo deploy   部署到远程服务里，例如github</span><br><span class="line"></span><br><span class="line">hexo p == hexo publish  新建草稿draft</span><br><span class="line"></span><br><span class="line">hexo clean     清除缓存文件</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"about"</span>   生成 /source/about/index.md 文件</span><br></pre></td></tr></table></figure>
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo server    默认为动态监听</span><br><span class="line"></span><br><span class="line">hexo server -s   静态模式</span><br><span class="line"></span><br><span class="line">hexo server -p <span class="number">5000</span>  指定端口</span><br><span class="line"></span><br><span class="line">hexo server -i <span class="number">10.20</span><span class="number">.62</span><span class="number">.123</span>   指定IP</span><br></pre></td></tr></table></figure>
-<h2 id="文章摘要"><a href="#文章摘要" class="headerlink" title="文章摘要"></a>文章摘要</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">方式<span class="number">1</span>：在front-matter中编写</span><br><span class="line"></span><br><span class="line">description: <span class="string">"This a digest bla bla..."</span> </span><br><span class="line"></span><br><span class="line">方式<span class="number">2</span></span><br><span class="line"></span><br><span class="line">在文章中插入一行  &lt;!--more--&gt;  以上部分为摘要</span><br></pre></td></tr></table></figure>
-          
+          <h2 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo <span class="keyword">new</span> <span class="string">"a new post"</span>  新建文章，最好用双引号括起来</span><br><span class="line"></span><br><span class="line">hexo g == hexo generate     生成静态文件到public文件夹</span><br><span class="line"></span><br><span class="line">hexo s == hexo server    Server at localhost:<span class="number">4000</span>，根目录为public</span><br><span class="line"></span><br><span class="line">hexo d == hexo deploy   部署到远程服务里，例如github</span><br><span class="line"></span><br><span class="line">hexo p == hexo publish  新建草稿draft</span><br><span class="line"></span><br><span class="line">hexo clean     清除缓存文件</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">new</span> page <span class="string">"about"</span>   生成 /source/about/index.md 文件</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/25/Hexo-常用命令笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -566,6 +569,153 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://leexhuan.github.io/2019/03/21/cmder/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LeeXhuan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="优 雅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/21/cmder/" itemprop="url">Cmder安装笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T13:50:56+08:00">
+                2019-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/使用说明/" itemprop="url" rel="index">
+                    <span itemprop="name">使用说明</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Cmder安装笔记"><a href="#Cmder安装笔记" class="headerlink" title="Cmder安装笔记"></a>Cmder安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder快捷键</a></p>
+<h1 id="右键管理"><a href="#右键管理" class="headerlink" title="右键管理"></a>右键管理</h1><h2 id="添加（方法一）"><a href="#添加（方法一）" class="headerlink" title="添加（方法一）"></a>添加（方法一）</h2><p>下载注册表文件<a href="https://gist.githubusercontent.com/AWMooreCO/f1e2457f66ceb41efdf7/raw/01679ce047451aa8f1ca8497e02ca64fa87350f6/cmder_context_enable.reg" target="_blank" rel="noopener">cmder_context_enable.reg</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%V\""</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%1\""</span></span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/21/cmder/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://leexhuan.github.io/2019/03/21/git-sshkey/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -676,153 +826,6 @@
         
       
     </li></ul></div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://leexhuan.github.io/2019/03/21/cmder/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LeeXhuan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/24219543?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="优 雅">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/21/cmder/" itemprop="url">Cmder安装笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-21T13:50:56+08:00">
-                2019-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/使用说明/" itemprop="url" rel="index">
-                    <span itemprop="name">使用说明</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Cmder安装笔记"><a href="#Cmder安装笔记" class="headerlink" title="Cmder安装笔记"></a>Cmder安装笔记</h1><p><a href="https://github.com/cmderdev/cmder#keyboard-shortcuts" target="_blank" rel="noopener">Cmder快捷键</a></p>
-<h1 id="右键管理"><a href="#右键管理" class="headerlink" title="右键管理"></a>右键管理</h1><h2 id="添加（方法一）"><a href="#添加（方法一）" class="headerlink" title="添加（方法一）"></a>添加（方法一）</h2><p>下载注册表文件<a href="https://gist.githubusercontent.com/AWMooreCO/f1e2457f66ceb41efdf7/raw/01679ce047451aa8f1ca8497e02ca64fa87350f6/cmder_context_enable.reg" target="_blank" rel="noopener">cmder_context_enable.reg</a><br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%V\""</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder]</span><br><span class="line">  @=<span class="string">"Open in Cmder"</span></span><br><span class="line">  <span class="string">"Icon"</span>=<span class="string">"C:\\cmder\\Cmder.exe,0"</span></span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\shell\cmder\command]</span><br><span class="line">  @=<span class="string">"\"C:\\cmder\\Cmder.exe\" \"%1\""</span></span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/03/21/cmder/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
     
     
     
@@ -1733,9 +1736,9 @@
   </div>
   
   
-    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
-    <script type="text/javascript" src="/js/src/anime.js"></script> 
-    <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+    <script type="text/javascript" src="/js/src/love.js"></script>
+  
   
 
   

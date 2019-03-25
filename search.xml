@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo 常用命令笔记]]></title>
     <url>%2F2019%2F03%2F25%2FHexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[hexo123456789101112131415161718192021npm install -g hexonpm update -g hexohexo init``` ## ```jshexo n == hexo new "a new post" 新建文章，最好用双引号括起来hexo g == hexo generate 生成静态文件到public文件夹hexo s == hexo server Server at localhost:4000，根目录为publichexo d == hexo deploy 部署到远程服务里，例如githubhexo p == hexo publish 新建草稿drafthexo clean 清除缓存文件hexo new page "about" 生成 /source/about/index.md 文件 服务器1234567hexo server 默认为动态监听hexo server -s 静态模式hexo server -p 5000 指定端口hexo server -i 10.20.62.123 指定IP 文章摘要1234567方式1：在front-matter中编写description: "This a digest bla bla..." 方式2在文章中插入一行 &lt;!--more--&gt; 以上部分为摘要]]></content>
+    <content type="text"><![CDATA[常用12345678910111213hexo n == hexo new "a new post" 新建文章，最好用双引号括起来hexo g == hexo generate 生成静态文件到public文件夹hexo s == hexo server Server at localhost:4000，根目录为publichexo d == hexo deploy 部署到远程服务里，例如githubhexo p == hexo publish 新建草稿drafthexo clean 清除缓存文件hexo new page "about" 生成 /source/about/index.md 文件 服务器1234567hexo server 默认为动态监听hexo server -s 静态模式hexo server -p 5000 指定端口hexo server -i 10.20.62.123 指定IP 文章摘要1234567方式1：在front-matter中编写description: "This a digest bla bla..." 方式2在文章中插入一行 &lt;!--more--&gt; 以上部分为摘要]]></content>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -20,17 +20,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Git 中 SSH key 生成步骤]]></title>
-    <url>%2F2019%2F03%2F21%2Fgit-sshkey%2F</url>
-    <content type="text"><![CDATA[Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key 第1步：创建SSH Key。 在windows下查看c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控制台中输入以下命令。 1$ ssh-keygen -t rsa -C "youremail@example.com" 密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥。这里使用的是rsa。 同时在密钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息。所以在这里输入自己的邮箱或者其他都行。 输入完毕后程序同时要求输入一个密语字符串(passphrase)，空表示没有密语。接着会让输入2次口令(password)，空表示没有口令。3次回车即可完成当前步骤，此时c盘&gt;用户&gt;自己的用户名&gt;.ssh目录下已经生成好了。 第2步：登录github。 打开setting-&gt;SSH keys，点击右上角 New SSH key，把生成好的公钥id_rsa.pub放进 key输入框中，再为当前的key起一个title来区分每个key。 避免每次都需要输入用户名和密码1$ git config --global credential.helper store]]></content>
-      <categories>
-        <category>使用说明</category>
-      </categories>
-      <tags>
-        <tag>SSH-key</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Cmder安装笔记]]></title>
     <url>%2F2019%2F03%2F21%2Fcmder%2F</url>
     <content type="text"><![CDATA[Cmder安装笔记Cmder快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder] @="Open in Cmder" "Icon"="C:\\cmder\\Cmder.exe,0"[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command] @="\"C:\\cmder\\Cmder.exe\" \"%V\""[HKEY_CLASSES_ROOT\Directory\shell\cmder] @="Open in Cmder" "Icon"="C:\\cmder\\Cmder.exe,0"[HKEY_CLASSES_ROOT\Directory\shell\cmder\command] @="\"C:\\cmder\\Cmder.exe\" \"%1\"" 修改注册表中程序目录地址 运行注册表 添加（方法二）1、把 Cmder 加到环境变量 把Cmder.exe存放的目录添加到系统环境变量；加完之后,Win+r一下输入cmder,即可。 2、添加 cmder 到右键菜单：环境变量添加后，在任意文件夹中即可打开Cmder，上一步的把 Cmder 加到环境变量就是为此服务的, 在管理员权限的终端输入以下语句即可: 1Cmder.exe /REGISTER ALL 3、为Cmder.exe创建快捷方式，右击Cmder.exe选择“创建快捷方式”点击即可，以后打开Cmder.exe只要点击桌面对应的快捷方式即可 删除下载注册表文件cmder_context_disable.reg1234Windows Registry Editor Version 5.00[-HKEY_CLASSES_ROOT\Directory\Background\shell\cmder][-HKEY_CLASSES_ROOT\Directory\shell\cmder] 运行注册表 常见问题中文乱码: 进入Settings&gt;Startup&gt;Environment,添加chcp 65001变更为utf-8.重启即可]]></content>
@@ -39,6 +28,17 @@
       </categories>
       <tags>
         <tag>Cmder</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git 中 SSH key 生成步骤]]></title>
+    <url>%2F2019%2F03%2F21%2Fgit-sshkey%2F</url>
+    <content type="text"><![CDATA[Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key 第1步：创建SSH Key。 在windows下查看c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控制台中输入以下命令。 1$ ssh-keygen -t rsa -C "youremail@example.com" 密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥。这里使用的是rsa。 同时在密钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息。所以在这里输入自己的邮箱或者其他都行。 输入完毕后程序同时要求输入一个密语字符串(passphrase)，空表示没有密语。接着会让输入2次口令(password)，空表示没有口令。3次回车即可完成当前步骤，此时c盘&gt;用户&gt;自己的用户名&gt;.ssh目录下已经生成好了。 第2步：登录github。 打开setting-&gt;SSH keys，点击右上角 New SSH key，把生成好的公钥id_rsa.pub放进 key输入框中，再为当前的key起一个title来区分每个key。 避免每次都需要输入用户名和密码1$ git config --global credential.helper store]]></content>
+      <categories>
+        <category>使用说明</category>
+      </categories>
+      <tags>
+        <tag>SSH-key</tag>
       </tags>
   </entry>
   <entry>

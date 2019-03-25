@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hexo 常用命令笔记]]></title>
     <url>%2F2019%2F03%2F25%2FHexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[hexo12345678910111213141516171819npm install -g hexonpm update -g hexohexo init``` ## 常用```jshexo n == hexo new "a new post" 新建文章，最好用双引号括起来hexo g == hexo generate 生成静态文件到public文件夹hexo s == hexo server Server at localhost:4000，根目录为publichexo d == hexo deploy 部署到远程服务里，例如githubhexo p == hexo publish 新建草稿drafthexo clean 清除缓存文件hexo new page "about" 生成 /source/about/index.md 文件 服务器1234567hexo server 默认为动态监听hexo server -s 静态模式hexo server -p 5000 指定端口hexo server -i 10.20.62.123 指定IP 文章摘要1234567方式1：在front-matter中编写description: "This a digest bla bla..." 方式2在文章中插入一行 &lt;!--more--&gt; 以上部分为摘要]]></content>
+    <content type="text"><![CDATA[hexo123456789101112131415161718192021npm install -g hexonpm update -g hexohexo init``` ## ```jshexo n == hexo new "a new post" 新建文章，最好用双引号括起来hexo g == hexo generate 生成静态文件到public文件夹hexo s == hexo server Server at localhost:4000，根目录为publichexo d == hexo deploy 部署到远程服务里，例如githubhexo p == hexo publish 新建草稿drafthexo clean 清除缓存文件hexo new page "about" 生成 /source/about/index.md 文件 服务器1234567hexo server 默认为动态监听hexo server -s 静态模式hexo server -p 5000 指定端口hexo server -i 10.20.62.123 指定IP 文章摘要1234567方式1：在front-matter中编写description: "This a digest bla bla..." 方式2在文章中插入一行 &lt;!--more--&gt; 以上部分为摘要]]></content>
       <tags>
         <tag>hexo</tag>
       </tags>

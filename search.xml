@@ -45,17 +45,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Sass 安装笔记]]></title>
-    <url>%2F2019%2F03%2F21%2Fsass-installation-and-use%2F</url>
-    <content type="text"><![CDATA[环境的配置 下载 Ruby 安装在 c 盘 勾选 自动配置环境变量 打开 开始安装 sass 打开电脑的Ruby命令终端，输入下面的命令： 1gem install sass 文件下载安装 1gem install http://rubygems.org/gems/sass Gem instal 本地下载的 sass 路径 淘宝 RubyGems镜像安装 Sass 1234gem sources --remove https://rubygems.org/gem sources -a http://ruby.taobao.org/ 注意是 http 不是 httpsgem sources -l 查询 sass的版本 1sass -v 更新 sass 1gem update sass 卸载 1gem uninstall sass 语法 老语法：.sass为扩展名 无大括号 无分号 新语法： .scss为扩展名 编译 命令编译 GUI 工具编译 自动化编译 命令编译 单文件sass &lt;要编译的 Sass 文件路径&gt;/style.scss:&lt;要输出CSS文件路径&gt;/style.css Eg:sass E:\微信混合开发\sass\common.scss:E:\微信混合开发\css\css.css 多文件 sass sass/:css/ 每次都需要重新 watct 监视sass –watch &lt;要编译的Sass文件路径&gt;/style.scss:&lt;要输出CSS文件路径&gt;/style.cssEg:sass --watch E:\微信混合开发\sass\common.scss:E:\微信混合开发\css\css.css GUI Koala CodeKit Grunt 和 Gulp 自动化在 Sass 的编译的过程中 是不支持“GBK”编码的。所以在创建 Sass 文件时，就需要将文件编码设置为“utf-8”。 输出方式： 嵌套输出方式 nested --style nested 展开输出方式 expanded --style expanded 紧凑输出方式 compact --style compact 压缩输出方式 compressed --style compressed 语法:SASS允许使用变量，所有变量以$开头。 12$blue : #1875e7;`$`声明变量 `blue `变量名称 `#1875e7` 变量值 作用域的概念12345678910111213$color: orange !default; //定义全局变量.block &#123; color: $color;&#125;.em&#123; $color: red; //定义局部变量 a&#123; color: $color; //调用局部变量 &#125;&#125;span&#123; color: $color;&#125; 选择器嵌套 选择器嵌套 属性嵌套 伪类嵌套(和属性选择器很相识) 宏的概念(函数)带参数 不带参数 带默认值 多个参数 1234567891011121314151617@mixin border-radius-5px&#123; border-radius: 5px;&#125;.button&#123; @include border-radius-5px;&#125;@mixin border-radius($radius)&#123; border-radius:$radius ;&#125;.box&#123; @include border-radius(10px)&#125;@mixin border-setborder($radius:5px)&#123; border-radius: $radius;&#125; 声明关键字 `mixin` 123456@mixin border-radius&#123; border-radius:3px&#125;Button&#123; @include border-radius;&#125; 继承 关键字`extend` 123.circle&#123; border-radius:50%&#125; 占位符 `%`(零时变量) 不被继承不编译 123%center:&#123; text-aline:center;&#125; 如果你的代码块中涉及到变量，建议使用混合宏来创建相同的代码块。 如果你的代码块不需要专任何变量参数，而且有一个基类已在文件中存在，那么建议使用Sass 的继承。 占位符是独立定义，不调用的时候是不会在 CSS 中产生任何代码；继承是首先有一个基类存在，不管调用与不调用，基类的样式都将会出现在编译出来的 CSS 代码中。 如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。1234$side : left;.rounded &#123; border-#&#123;$side&#125;-radius: 5px;&#125; 计算功能SASS 允许在代码中使用算式： 12345body &#123; margin: (14px/2); top: 50px + 100px; right: $var * 10%;&#125;]]></content>
-      <categories>
-        <category>使用说明</category>
-      </categories>
-      <tags>
-        <tag>Sass</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Git 中 SSH key 生成步骤]]></title>
     <url>%2F2019%2F03%2F21%2Fgit-sshkey%2F</url>
     <content type="text"><![CDATA[Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key 第1步：创建SSH Key。 在windows下查看c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控制台中输入以下命令。 1$ ssh-keygen -t rsa -C "youremail@example.com" 密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥。这里使用的是rsa。 同时在密钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息。所以在这里输入自己的邮箱或者其他都行。 输入完毕后程序同时要求输入一个密语字符串(passphrase)，空表示没有密语。接着会让输入2次口令(password)，空表示没有口令。3次回车即可完成当前步骤，此时c盘&gt;用户&gt;自己的用户名&gt;.ssh目录下已经生成好了。 第2步：登录github。 打开setting-&gt;SSH keys，点击右上角 New SSH key，把生成好的公钥id_rsa.pub放进 key输入框中，再为当前的key起一个title来区分每个key。 避免每次都需要输入用户名和密码1$ git config --global credential.helper store]]></content>
@@ -64,6 +53,17 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Sass 安装笔记]]></title>
+    <url>%2F2019%2F03%2F21%2Fsass-installation-and-use%2F</url>
+    <content type="text"><![CDATA[环境的配置 下载 Ruby 安装在 c 盘 勾选 自动配置环境变量 打开 开始安装 sass 打开电脑的Ruby命令终端，输入下面的命令： 1gem install sass 文件下载安装 1gem install http://rubygems.org/gems/sass Gem instal 本地下载的 sass 路径 淘宝 RubyGems镜像安装 Sass 1234gem sources --remove https://rubygems.org/gem sources -a http://ruby.taobao.org/ 注意是 http 不是 httpsgem sources -l 查询 sass的版本 1sass -v 更新 sass 1gem update sass 卸载 1gem uninstall sass 语法 老语法：.sass为扩展名 无大括号 无分号 新语法： .scss为扩展名 编译 命令编译 GUI 工具编译 自动化编译 命令编译 单文件sass &lt;要编译的 Sass 文件路径&gt;/style.scss:&lt;要输出CSS文件路径&gt;/style.css Eg:sass E:\微信混合开发\sass\common.scss:E:\微信混合开发\css\css.css 多文件 sass sass/:css/ 每次都需要重新 watct 监视sass –watch &lt;要编译的Sass文件路径&gt;/style.scss:&lt;要输出CSS文件路径&gt;/style.cssEg:sass --watch E:\微信混合开发\sass\common.scss:E:\微信混合开发\css\css.css GUI Koala CodeKit Grunt 和 Gulp 自动化在 Sass 的编译的过程中 是不支持“GBK”编码的。所以在创建 Sass 文件时，就需要将文件编码设置为“utf-8”。 输出方式： 嵌套输出方式 nested --style nested 展开输出方式 expanded --style expanded 紧凑输出方式 compact --style compact 压缩输出方式 compressed --style compressed 语法:SASS允许使用变量，所有变量以$开头。 12$blue : #1875e7;`$`声明变量 `blue `变量名称 `#1875e7` 变量值 作用域的概念12345678910111213$color: orange !default; //定义全局变量.block &#123; color: $color;&#125;.em&#123; $color: red; //定义局部变量 a&#123; color: $color; //调用局部变量 &#125;&#125;span&#123; color: $color;&#125; 选择器嵌套 选择器嵌套 属性嵌套 伪类嵌套(和属性选择器很相识) 宏的概念(函数)带参数 不带参数 带默认值 多个参数 1234567891011121314151617@mixin border-radius-5px&#123; border-radius: 5px;&#125;.button&#123; @include border-radius-5px;&#125;@mixin border-radius($radius)&#123; border-radius:$radius ;&#125;.box&#123; @include border-radius(10px)&#125;@mixin border-setborder($radius:5px)&#123; border-radius: $radius;&#125; 声明关键字 `mixin` 123456@mixin border-radius&#123; border-radius:3px&#125;Button&#123; @include border-radius;&#125; 继承 关键字`extend` 123.circle&#123; border-radius:50%&#125; 占位符 `%`(零时变量) 不被继承不编译 123%center:&#123; text-aline:center;&#125; 如果你的代码块中涉及到变量，建议使用混合宏来创建相同的代码块。 如果你的代码块不需要专任何变量参数，而且有一个基类已在文件中存在，那么建议使用Sass 的继承。 占位符是独立定义，不调用的时候是不会在 CSS 中产生任何代码；继承是首先有一个基类存在，不管调用与不调用，基类的样式都将会出现在编译出来的 CSS 代码中。 如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。1234$side : left;.rounded &#123; border-#&#123;$side&#125;-radius: 5px;&#125; 计算功能SASS 允许在代码中使用算式： 12345body &#123; margin: (14px/2); top: 50px + 100px; right: $var * 10%;&#125;]]></content>
+      <categories>
+        <category>使用说明</category>
+      </categories>
+      <tags>
+        <tag>Sass</tag>
       </tags>
   </entry>
   <entry>

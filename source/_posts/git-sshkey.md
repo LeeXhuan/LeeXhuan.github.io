@@ -1,7 +1,7 @@
 ---
 title: 'Git 中 SSH key 生成步骤'
 date: 2019-03-21 13:50:56
-tags: SSH-key
+tags: Git
 categories: 使用说明
 ---
 # Git 中 SSH key 生成步骤

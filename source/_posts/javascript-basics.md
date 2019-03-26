@@ -1,10 +1,10 @@
 ---
-title: 'JavaScript基础面试题'
+title: JavaScript 基础面试题
 date: 2019-03-21 13:50:56
 tags: JavaScript
 categories: 面试题
 ---
-# 二、JavaScript基础
+# 二、JavaScript 基础
 ### 1、`javascript`的`typeof`返回哪些数据类型
 * `object` `number` `function` `boolean` `underfind` `string`
 	```javascript
@@ -17,15 +17,15 @@ categories: 面试题
 	var arr=[];
 	arr.constructor;//Array
 	```
-### 2、例举3种强制类型转换和2种隐式类型转换?
+### 2、例举 3 种强制类型转换和 2 种隐式类型转换?
 * 强制（`parseInt`,`parseFloat`,`Number()`）
 * 隐式（`==`）
 	* `1==”1”//true`
 	* `null==undefined//true`
 
 ### 3、`split()` `join()` 的区别
-* split是切割成数组的形式，
-* join是将数组转换成字符串
+* split 是切割成数组的形式
+* join 是将数组转换成字符串
 
 <!--more -->
 ### 4、数组方法`pop()` `push()` `unshift()` `shift()`
@@ -35,45 +35,45 @@ categories: 面试题
 * `shift()`头部删除
 
 ### 5、事件绑定和普通事件有什么区别
-传统事件绑定和符合W3C标准的事件绑定有什么区别？
+传统事件绑定和符合 W3C 标准的事件绑定有什么区别？
 ```html
 div1.onclick=function(){};
-<button  onmouseover=””></button>
+<button  onmouseover=""></button>
 ```
 1. 如果说给同一个元素绑定了两次或者多次相同类型的事件，那么后面的绑定会覆盖前面的绑定
-2. 不支持DOM事件流 事件捕获阶段目标元素阶段=>事件冒泡阶段
+2. 不支持 DOM 事件流 事件捕获阶段目标元素阶段=>事件冒泡阶段
 
 *  `addEventListener`
 1. 	如果说给同一个元素绑定了两次或者多次相同类型的事件，所以的绑定将会依次触发
-2. 	支持DOM事件流的
+2. 	支持 DOM 事件流的
 3. 	进行事件绑定传参不需要`on`前端
 	```javascript
-	addEventListener(“click”,function(){},true);
+	addEventListener("click",function(){},true);
 	//此时的事件就是在事件冒泡阶段执行
 	```
-* ie9开始，`ie11 edge：addEventListener`
-* ie9以前：`attachEvent('onclick')/detachEvent('onclick')`
+* ie9 开始，`ie11 edge：addEventListener`
+* ie9 以前：`attachEvent('onclick')/detachEvent('onclick')`
 1.	进行事件类型传参需要带上`on`前缀
 2.	这种方式只支持事件冒泡，不支持事件捕获
 事件绑定是指把事件注册到具体的元素之上，普通事件指的是可以用来注册的事件
 * 事件委托是什么
-符合W3C标准的事件绑定addEventLisntener /attachEvent
+符合 W3C 标准的事件绑定 addEventLisntener  / attachEvent 
 让利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行！
 
-* IE和DOM事件流的区别
+* IE 和 DOM 事件流的区别
 	1. 执行顺序不一样
 	2. 参数不一样
 	3. 事件加不加`on`
 	4. `this`指向问题
 
-### 6、IE和标准下有哪些兼容性的写法
+### 6、IE 和标准下有哪些兼容性的写法
 ```js
 var ev = ev || window.event;
 document.documentElement.clientWidth || document.body.clientWidth;
 var target = ev.srcElement || ev.target;
 ```
-### 7、call和apply的区别
-call和apply相同点：
+### 7、 call 和 apply 的区别
+call 和 apply 相同点：
 都是为了用一个本不属于一个对象的方法，让这个对象去执行
 ```js
 toString.call([],1,2,3)
@@ -87,7 +87,7 @@ Object.apply(this,arguments)
 	* 闭包就是能够读取其他函数内部变量的函数。
 	* 闭包的缺点：滥用闭包函数会造成内存泄露，因为闭包中引用到的包裹函数中定义的变量都永远不会被释放，所以我们应该在必要的时候，及时释放这个闭包函数
 
-* 作用域：定义一个函数就开辟了一个局部作用域，整个js执行环境有一个全局作用域
+* 作用域：定义一个函数就开辟了一个局部作用域，整个 js 执行环境有一个全局作用域
 
 ### 9、如何阻止事件冒泡和默认事件
 ```js
@@ -95,7 +95,7 @@ e.stopPropagation();//标准浏览器
 event.canceBubble=true;//ie9之前
 ```
 阻止默认事件：
-为了不让a点击之后跳转，我们就要给他的点击事件进行阻止
+为了不让 a 点击之后跳转，我们就要给他的点击事件进行阻止
 ```js
 return false; 
 e.preventDefault();
@@ -108,22 +108,26 @@ obj.insertBefore() //指定的已有子节点之前插入新的子节点；
 obj.replaceChild()//替换
 obj.removeChild()//删除
 ```
-### 11、javascript的本地对象，内置对象和宿主对象
+### 11、javascript 的本地对象，内置对象和宿主对象
+
 * 本地对象为`array` `obj` `regexp`等可以`new`实例化
 * 内置对象为`Global` `Math` 等不可以实例化的
 * 宿主为浏览器自带的`document`,`window` 等
+
 ### 12、`document load `和`document ready`的区别
 * `Document.onload` 是在结构和样式加载完才执行js
 * `window.onload`：不仅仅要在结构和样式加载完，还要执行完所有的样式、图片这些资源文件，全部加载完才会触发`window.onload`事件
 * `Document.ready`原生种没有这个方法，`jquery`中有 `$().ready(function)`
-### 13、”==”和“===”的不同
+
+### 13、“==”和“===”的不同
 * 前者会自动转换类型、后者不会
 	```js
-	1==”1”
+	1=='1'
 	null==undefined
 	```
 	`===`先判断左右两边的数据类型，如果数据类型不一致，直接返回`false`之后才会进行两边值的判断
-### 14、javascript的同源策略
+
+### 14、javascript 的同源策略
 * 一段脚本只能读取来自于同一来源的窗口和文档的属性，这里的同一来源指的是主机名、协议和端口号的组合
 	* `http`,`ftp`:协议
 	* 主机名；`localhost`
@@ -131,6 +135,7 @@ obj.removeChild()//删除
 	* `https`:默认端口是`8083`
 同源策略带来的麻烦：`ajax`在不同域名下的请求无法实现，
 如果说想要请求其他来源的`js`文件，或者`json`数据，那么可以通过`jsonp`来解决
+
 ### 15、编写一个数组去重的方法
 ```js
 var arr=[1,1,3,4,2,4,7];=>[1,3,4,2,7];
@@ -146,30 +151,30 @@ var arr=[1,1,3,4,2,4,7];=>[1,3,4,2,7];
 		var newArr=[];
 		arr.forEach(item=>{
 			if(!result[item]) {
-			newArr.push(item)
-			result[arr]=1
+				newArr.push(item)
+				result[arr] = 1
 			}
 		});
 		return newArr
 	}
 	```
 	
-### 16、JavaScript是一门什么样的语言，它有哪些特点？
+### 16、JavaScript 是一门什么样的语言，它有哪些特点？
 
-* 运行环境：浏览器中的JS引擎（`v8`）
+* 运行环境：浏览器中的 JS 引擎（`v8`）
 * 语言特性：面向对象，动态语言：
 	```js
 	//动态语言的特性
-	var num=10;//num是一个数字类型
+	var num = 10;//num是一个数字类型
 	num = "jim";//此时num又变成一个字符串类型
 	```
 * 我们把一个变量用来保存不同数据类型的语言称之为一个动态语言
 * 静态语言：`c# java c c++`
-* 静态语言在声明一个变量就已经确定了这个变量的数据类型，
+* 静态语言在声明一个变量就已经确定了这个变量的数据类型
 * 而且在任何时候都不可以改变他的数据类型
 
-### 17、JavaScript的数据类型都有什么？
-* 基本数据类型：**String**,**Boolean**,**number**,**undefined**,**object**,**Null**
+### 17、JavaScript 的数据类型都有什么？
+* 基本数据类型：**String,Boolean,number,undefined,object,Null**
 * 引用数据类型：**Object(Array,Date,RegExp,Function)**
 * 那么问题来了，如何判断某变量是否为数组数据类型？
 	- 方法一.	判断其是否具有“数组性质”，如`slice()`方法。可自己给该变量定义`slice`方法，故有时会失效
@@ -184,67 +189,70 @@ var arr=[1,1,3,4,2,4,7];=>[1,3,4,2,7];
 		//toString.call常用于判断数组、正则这些复杂类型
 		toString.call(/[0-9]{10}/)//”[object RegExp]”
 		if(typeof Array.isArray==="undefined"){
-		  Array.isArray = function(arg){
+		  	Array.isArray = function(arg){
 				return Object.prototype.toString.call(arg)==="[object Array]"
 			};
 		}
 		```
-### 18、已知ID的`Input`输入框，希望获取这个输入框的输入值，怎么做？(不使用第三方框架)
+### 18、已知 ID 的`Input`输入框，希望获取这个输入框的输入值，怎么做？(不使用第三方框架)
 ```js
-	document.getElementById(“ID”).value
+	document.getElementById('ID').value
 ```
 ### 19、希望获取到页面中所有的`checkbox`怎么做？(不使用第三方框架)
 ```js
-var domList = document.getElementsByTagName(‘input’)
+var domList = document.getElementsByTagName('input')
 var checkBoxList = [];//返回的所有的checkbox
 var len = domList.length;//缓存到局部变量
 while (len--) {//使用while的效率会比for循环更高
-  if (domList[len].type == ‘checkbox’) {
+  if (domList[len].type == 'checkbox') {
 	  checkBoxList.push(domList[len]);
   }
 }
 ```
-### 20、设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色(不使用第三方框架)
+### 20、设置一个已知 ID 的 DIV 的 html 内容为xxxx，字体颜色设置为黑色(不使用第三方框架)
 ```js
-var dom = document.getElementById(“ID”);
-dom.innerHTML = “xxxx”
-dom.style.color = “#000”
+var dom = document.getElementById('ID');
+dom.innerHTML = 'xxxx'
+dom.style.color = '#000'
 ```
-### 21、当一个DOM节点被点击时候，我们希望能够执行一个函数，应该怎么做？
-* 直接在DOM里绑定事件：`<div></div>`
-* 在JS里通过`onclick`绑定：`xxx.onclick = test`
-* 通过事件添加进行绑定：`addEventListener(xxx, ‘click’, test)`
+### 21、当一个 DOM 节点被点击时候，我们希望能够执行一个函数，应该怎么做？
+* 直接在 DOM 里绑定事件：`<div></div>`
+* 在 JS 里通过`onclick`绑定：`xxx.onclick = test`
+* 通过事件添加进行绑定：`addEventListener(xxx, 'click', test)`
 * 那么问题来了，`Javascript`的事件流模型都有什么？
 	- “事件冒泡”：事件开始由最具体的元素接受，然后逐级向上传播
 	- “事件捕捉”：事件由最不具体的节点先接收，然后逐级向下，一直到最具体的
-	- “DOM事件流”：三个阶段：事件捕捉，目标阶段，事件冒泡
+	- “ DOM 事件流”：三个阶段：事件捕捉，目标阶段，事件冒泡
+
 ### 22、看下列代码输出为何？解释原因。
 ```js
 var a;
 alert(typeof a); // “undefined”
 //alert(b); // 报错
-b=10;
+b = 10;
 alert(typeof b);//”number”
 ```
-解释：`undefined`是一个只有一个值的数据类型，这个值就是“`undefined`”，在使用var声明变量但并未对其赋值进行初始化时，这个变量的值就是`undefined`。而b由于未声明将报错。注意未申明的变量和声明了未赋值的是不一样的。
+解释：`undefined`是一个只有一个值的数据类型，这个值就是“`undefined`”，在使用 var 声明变量但并未对其赋值进行初始化时，这个变量的值就是`undefined`。而b由于未声明将报错。注意未申明的变量和声明了未赋值的是不一样的。
 `undefined`会在以下三种情况下产生：
 1.	一个变量定义了却没有被赋值
 2.	想要获取一个对象上不存在的属性或者方法:
 3.	一个数组中没有被赋值的元素
 注意区分`undefined`跟`not defnied`(语法错误)是不一样的
+
 ### 23、看下列代码,输出什么？解释原因。
 ```js
 var a = null;
 alert(typeof a); //object
 ```
 解释：`null`是一个只有一个值的数据类型，这个值就是`null`。表示一个空指针对象，所以用`typeof`检测会返回”`object`”。
+
 ### 24、看下列代码,输出什么？解释原因。
 ```js
 var undefined;//此时undefined这个变量的值是undefined
 undefined == null; // true
 1 == true;   // true
 ```
-此时会把布尔类型的值转换为数字类型 `true=1 false=0`
+此时会把布尔类型的值转换为数字类型 `true = 1 false = 0`
 ```js
 2 == true;   // false
 0 == false;  // true
@@ -257,14 +265,15 @@ NaN == NaN;  // false
 一个是`number`一个是`string`时，会尝试将`string`转换为`number`
 尝试将`boolean`转换为`number`，`0`或`1`
 尝试将`Object`转换成`number`或`string`，取决于另外一个对比量的类型
-所以，对于`0`、`空字符串`的判断，建议使用 “`===`” 。“`===`”会先判断两边的值类型，类型不匹配时为`false`。
-那么问题来了，看下面的代码，输出什么，foo的值为什么？
+所以，对于`0`、`空字符串`的判断，建议使用 `===` 。`===`会先判断两边的值类型，类型不匹配时为`false`。
+那么问题来了，看下面的代码，输出什么，foo 的值为什么？
 ```js
-var foo = "11"+2-"1";
+var foo = "11" + 2 - "1";
 console.log(foo);//111
-console.log(typeof foo);
+console.log(typeof foo);//Number
 ```
 执行完后`foo`的值为`111`，`foo`的类型为`number`。
+
 ### 25、看代码给答案。
 ```js
 var a = new Object();
@@ -273,7 +282,7 @@ b = a; //{value:1}
 b.value = 2;
 alert(a.value);//2
 ```
-### 26、已知数组`var stringArray = [“This”, “is”, “Baidu”, “Campus”]`，`Alert`出”`This is Baidu Campus`”。
+### 26、已知数组`var stringArray = [“This”, “is”, “Baidu”, “Campus”]`，`Alert`出“`This is Baidu Campus`”。
 ```js
 alert(stringArray.join(""))
 ```
@@ -284,23 +293,21 @@ function combo(msg) {
 	for (var i = 1; i < arr.length; i++) {
 		arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1, arr[i].length-1);	//Element
 	}
-	msg = arr.join(""); //msg=” getElementById”
+	msg = arr.join(""); //msg='getElementById'
 	return msg;
 }
-(考察基础API)
+(考察基础 API )
 ```
-### 27、`var numberArray = [3,6,2,4,1,5]`; （考察基础API）
-1) 实现对该数组的倒排，输出[5,1,4,2,6,3]
+### 27、`var numberArray = [3,6,2,4,1,5]`; （考察基础 API ）
+1) 实现对该数组的倒排，输出[5, 1, 4, 2, 6, 3]
 ```js
 numberArray.reverse();//[5, 1, 4, 2, 6, 3]
 ```
-2) 实现对该数组的降序排列，输出[6,5,4,3,2,1]
+2) 实现对该数组的降序排列，输出[ 6, 5, 4, 3, 2, 1]
 ```js
-numberArray.sort(function (x,y) {
-	return y-x;
-});//[6, 5, 4, 3, 2, 1]
+numberArray.sort((x,y) => y-x);//[6, 5, 4, 3, 2, 1]
 ```
-### 28、输出今天的日期，以YYYY-MM-DD的方式，比如今天是2014年9月26日，则输出2014-09-26
+### 28、输出今天的日期，以 YYYY-MM-DD 的方式，比如今天是 2014 年 9 月 26 日，则输出 2014-09-26
 ```js
 var d = new Date();
 // 获取年，getFullYear()返回4位的数字
@@ -311,10 +318,13 @@ var month = d.getMonth() + 1;
 month = month < 10 ? '0' + month : month;
 // 获取日
 var day = d.getDate();
+
 day = day < 10 ? '0' + day : day;
+
 alert(year + '-' + month + '-' + day);
+
 ```
-### 29、将字符串”`<tr><td>{$id}</td><td>{$name}</td></tr>`”中的`{$id}`替换成`10`，`{$name}`替换成`Tony` （使用正则表达式）
+### 29、将字符串“`<tr><td>{$id}</td><td>{$name}</td></tr>`”中的`{$id}`替换成`10`，`{$name}`替换成`Tony` （使用正则表达式）
 ```js
 '<tr><td>{$id}</td><td>{$id}_{$name}</td></tr>'.replace(/{\$id}/g, ’10′).replace(/{\$name}/g, ‘Tony’);
 ```
@@ -370,7 +380,7 @@ function getRandom (istart, iend) {
         var iChoice = iend - istart  + 1;
         return Math.floor( Math.random()  *  iChoice + istart);
 }
-//Math.random()就是获取0-1之间的随机数（永远获取不到1）
+//Math.random()就是获取 0~1 之间的随机数（永远获取不到 1 ）
 for (var i=0; i < 10; i++) {
 	var result= getRandom(10,100);
     iArray.push(result);
@@ -384,10 +394,10 @@ var bArray = ['d','e','f'];
 var cArray = array1.concat(bArray);
 cArray.splice(1,1);
 ```
-### 35、怎样添加、移除、移动、复制、创建和查找节点（原生JS，实在基础，没细写每一步）
+### 35、怎样添加、移除、移动、复制、创建和查找节点（原生 JS ，实在基础，没细写每一步）
 1. 创建新节点
 	```js
-	createDocumentFragment()    //创建一个DOM片段
+	createDocumentFragment()    //创建一个 DOM 片段
 	createElement()   			//创建一个具体的元素
 	createTextNode()   			//创建一个文本节点
 	```
@@ -401,8 +411,8 @@ cArray.splice(1,1);
 3. 查找
 	```js
 	getElementsByTagName()  //通过标签名称
-	getElementsByName()     //通过元素的Name属性的值
-	getElementById()        //通过元素Id，唯一性
+	getElementsByName()     //通过元素的 Name 属性的值
+	getElementById()        //通过元素 Id ，唯一性
 	```
 ### 36、有这样一个`URL`：`http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e`，请写一段`JS`程序提取`URL`中的各个`GET`参数(参数名和参数个数不确定)，将其按`key-value`形式返回到一个`json`结构中，如`{a:’1′, b:’2′, c:”, d:’xxx’, e:undefined}`。
 ```js
@@ -459,7 +469,7 @@ alert(str == "test string"); // alerts "true"
 `arguments.callee`：获得当前函数的引用
 `caller`是返回一个对函数的引用，该函数调用了当前函数；
 `callee`是返回正在被执行的`function`函数，也就是所指定的`function`对象的正文。
-那么问题来了？如果一对兔子每月生一对兔子；一对新生兔，从第二个月起就开始生兔子；假定每对兔子都是一雌一雄，试问一对兔子，第n个月能繁殖成多少对兔子？（使用`callee`完成）
+那么问题来了？如果一对兔子每月生一对兔子；一对新生兔，从第二个月起就开始生兔子；假定每对兔子都是一雌一雄，试问一对兔子，第 n 个月能繁殖成多少对兔子？（使用`callee`完成）
 ```js
 var result=[];
 function fn(n){  //典型的斐波那契数列

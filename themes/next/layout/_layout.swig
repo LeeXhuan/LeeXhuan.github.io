@@ -74,6 +74,10 @@
     <script type="text/javascript" src="/js/src/anime.js"></script> 
     <script type="text/javascript" src="/js/src/fireworks.js"></script>
   {% endif %}
+  {% if theme.love %}
+    <script type="text/javascript" src="/js/src/love.js"></script>
+  {% endif %}
+  
 
   {% include '_scripts/vendors.swig' %}
   {% include '_scripts/commons.swig' %}

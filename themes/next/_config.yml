@@ -291,7 +291,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night
+highlight_theme: normal
 
 
 # ---------------------------------------------------------------
@@ -828,4 +828,5 @@ images: images
 version: 5.1.4
 
 # Fireworks
-fireworks: true
+fireworks: false #太夸张了不便于复制
+love: true

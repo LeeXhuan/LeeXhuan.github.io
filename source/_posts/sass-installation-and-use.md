@@ -1,19 +1,19 @@
 ---
-title: 'sass安装笔记'
+title: 'Sass 安装笔记'
 date: 2019-03-21 13:50:56
-tags: sass
+tags: Sass
 categories: 使用说明
 ---
 ## 环境的配置
-1.  [下载Ruby](http://rubyinstaller.org/downloads)
+1.  [下载 Ruby ](http://rubyinstaller.org/downloads)
 
-	安装在c盘  勾选
+	安装在 c 盘  勾选
 
 	自动配置环境变量
 
 	打开
 <!--more -->	
-## 开始安装sass
+## 开始安装 sass
 2. 打开电脑的`Ruby`命令终端，输入下面的命令：
 
 	```c
@@ -23,14 +23,14 @@ categories: 使用说明
 	```c
 	 gem install  http://rubygems.org/gems/sass
 	```
-	Gem instal  本地下载的sass路径
+	Gem instal  本地下载的 sass 路径
 
 4. 淘宝 `RubyGems `镜像安装 `Sass`
 
 	```c
 	gem sources --remove https://rubygems.org/
 	gem sources -a http://ruby.taobao.org/ 
-	注意是http不是https
+	注意是 http 不是 https
 	gem sources -l
 	```
 
@@ -39,7 +39,7 @@ categories: 使用说明
 	```c
 	sass -v
 	```
-6. 更新sass
+6. 更新 sass
 
 	```c
 	gem update sass
@@ -59,12 +59,12 @@ categories: 使用说明
 
 9. 编译
 	* 命令编译
-	* GUI工具编译
+	* GUI 工具编译
 	* 自动化编译
 
 10. 命令编译
 	* 单文件
-	sass <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径>/style.css
+	sass <要编译的 Sass 文件路径>/style.scss:<要输出CSS文件路径>/style.css
 	
 	`Eg:sass E:\微信混合开发\sass\common.scss:E:\微信混合开发\css\css.css`
 	
@@ -73,7 +73,7 @@ categories: 使用说明
 	`sass sass/:css/`
 	
 	### 每次都需要重新
-	- watct监视
+	- watct 监视
 sass --watch <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径>/style.css
 `Eg:sass --watch E:\微信混合开发\sass\common.scss:E:\微信混合开发\css\css.css`
 
@@ -85,7 +85,7 @@ sass --watch <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径
 
 ##  Grunt 和 Gulp 自动化
 
-在Sass的编译的过程中 是不支持“GBK”编码的。所以在创建 Sass 文件时，就需要将文件编码设置为“utf-8”。
+在 Sass 的编译的过程中 是不支持“GBK”编码的。所以在创建 Sass 文件时，就需要将文件编码设置为“utf-8”。
 
 - 输出方式：
   - 嵌套输出方式 `nested   --style nested`
@@ -98,9 +98,9 @@ sass --watch <要编译的Sass文件路径>/style.scss:<要输出CSS文件路径
  
 	```scss
 	$blue : #1875e7;
+	`$`声明变量 `blue `变量名称 `#1875e7` 变量值
 	```
   
-	`$`声明变量 `blue `变量名称 `#1875e7` 变量值
 
 ### 作用域的概念
 
@@ -181,13 +181,13 @@ Button{
 
 如果变量需要镶嵌在字符串之中，就必须需要写在`#{}`之中。
 ```scss
-　　$side : left;
-		.rounded {
-　　　　border-#{$side}-radius: 5px;
-　　}
+$side : left;
+.rounded {
+　　border-#{$side}-radius: 5px;
+}
 ```
 ### 计算功能
-SASS允许在代码中使用算式：
+SASS 允许在代码中使用算式：
 
 ```scss
 body {

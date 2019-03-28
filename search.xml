@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[关于 Object 的理解]]></title>
+    <title><![CDATA[关于 Object 和局部变量的理解]]></title>
     <url>%2F2019%2F03%2F28%2F%E5%85%B3%E4%BA%8EObject%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[在面试题中看到一个题目（如下）12345678function setN(obj)&#123; obj.num='1'; obj = new Object(); obj.num = '2';&#125;;var per = new Object();setN(per);console.log(per.num); //1 最开始看到这个题目的时候，看了一下这不应该打印 2 嘛！后来一运行发现是输出 1 ，自己的表情是？？？？ 后来仔细分析了一下才发现其中的端倪，在 setN 函数中重写了形参 obj 的时候就已经和实参的 per 没有关系了，让 obj 变成了一个局部变量 所以输出 per.num 的结果才会是 1 后续的赋值仅仅是赋值给了 setN 函数内的局部变量 obj 其中 obj.num 为 2 。]]></content>
       <tags>

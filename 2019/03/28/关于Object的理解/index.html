@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在面试题中看到一个题目（如下）12345678function setN(obj)&amp;#123;    obj.num=&apos;1&apos;;    obj = new Object();    obj.num = &apos;2&apos;;&amp;#125;;var per = new Object();setN(per);console.log(per.num); //1  最开始看到这个题目的时候，看了一下这不应该打印 2 嘛！后">
+<meta name="description" content="在面试题中看到一个题目（如下）12345678function setN(obj)&amp;#123;    obj.num=&apos;1&apos;;    obj = new Object();    obj.num = &apos;2&apos;;&amp;#125;;var per = new Object();setN(per);console.log(per.num); //1">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于 Object 的理解">
 <meta property="og:url" content="https://leexhuan.github.io/2019/03/28/关于Object的理解/index.html">
 <meta property="og:site_name" content="优 雅">
-<meta property="og:description" content="在面试题中看到一个题目（如下）12345678function setN(obj)&amp;#123;    obj.num=&apos;1&apos;;    obj = new Object();    obj.num = &apos;2&apos;;&amp;#125;;var per = new Object();setN(per);console.log(per.num); //1  最开始看到这个题目的时候，看了一下这不应该打印 2 嘛！后">
+<meta property="og:description" content="在面试题中看到一个题目（如下）12345678function setN(obj)&amp;#123;    obj.num=&apos;1&apos;;    obj = new Object();    obj.num = &apos;2&apos;;&amp;#125;;var per = new Object();setN(per);console.log(per.num); //1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-28T02:44:39.520Z">
+<meta property="og:updated_time" content="2019-03-28T02:45:01.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于 Object 的理解">
-<meta name="twitter:description" content="在面试题中看到一个题目（如下）12345678function setN(obj)&amp;#123;    obj.num=&apos;1&apos;;    obj = new Object();    obj.num = &apos;2&apos;;&amp;#125;;var per = new Object();setN(per);console.log(per.num); //1  最开始看到这个题目的时候，看了一下这不应该打印 2 嘛！后">
+<meta name="twitter:description" content="在面试题中看到一个题目（如下）12345678function setN(obj)&amp;#123;    obj.num=&apos;1&apos;;    obj = new Object();    obj.num = &apos;2&apos;;&amp;#125;;var per = new Object();setN(per);console.log(per.num); //1">
 
 
 
@@ -364,6 +364,7 @@
 
       
         <h1 id="在面试题中看到一个题目（如下）"><a href="#在面试题中看到一个题目（如下）" class="headerlink" title="在面试题中看到一个题目（如下）"></a>在面试题中看到一个题目（如下）</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setN</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    obj.num=<span class="string">'1'</span>;</span><br><span class="line">    obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    obj.num = <span class="string">'2'</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> per = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">setN(per);</span><br><span class="line"><span class="built_in">console</span>.log(per.num); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <ul>
 <li>最开始看到这个题目的时候，看了一下这不应该打印 2 嘛！后来一运行发现是输出 1 ，自己的表情是？？？？ </li>
 <li>后来仔细分析了一下才发现其中的端倪，在 setN 函数中重写了形参 obj 的时候就已经和实参的 per 没有关系了，让 obj 变成了一个局部变量</li>

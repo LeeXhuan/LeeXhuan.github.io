@@ -39,17 +39,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Cmder 安装笔记]]></title>
-    <url>%2F2019%2F03%2F21%2Fcmder%2F</url>
-    <content type="text"><![CDATA[Cmder 安装笔记Cmder 快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder] @="Open in Cmder" "Icon"="C:\\cmder\\Cmder.exe,0"[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command] @="\"C:\\cmder\\Cmder.exe\" \"%V\""[HKEY_CLASSES_ROOT\Directory\shell\cmder] @="Open in Cmder" "Icon"="C:\\cmder\\Cmder.exe,0"[HKEY_CLASSES_ROOT\Directory\shell\cmder\command] @="\"C:\\cmder\\Cmder.exe\" \"%1\"" 修改注册表中程序目录地址 运行注册表 添加（方法二）1、把 Cmder 加到环境变量 把 Cmder.exe 存放的目录添加到系统环境变量；加完之后, Win+r 一下输入 cmder ,即可。 2、添加 cmder 到右键菜单：环境变量添加后，在任意文件夹中即可打开 Cmder，上一步的把 Cmder 加到环境变量就是为此服务的, 在管理员权限的终端输入以下语句即可: 1Cmder.exe /REGISTER ALL 3、为 Cmder.exe 创建快捷方式，右击 Cmder.exe 选择“创建快捷方式”点击即可，以后打开 Cmder.exe 只要点击桌面对应的快捷方式即可 删除下载注册表文件cmder_context_disable.reg1234Windows Registry Editor Version 5.00[-HKEY_CLASSES_ROOT\Directory\Background\shell\cmder][-HKEY_CLASSES_ROOT\Directory\shell\cmder] 运行注册表 常见问题中文乱码: 进入Settings&gt;Startup&gt;Environment,添加chcp 65001变更为utf-8.重启即可]]></content>
-      <categories>
-        <category>使用说明</category>
-      </categories>
-      <tags>
-        <tag>Cmder</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[NVM 使用相关说明]]></title>
     <url>%2F2019%2F03%2F21%2FNVM-%E4%BD%BF%E7%94%A8%E7%9B%B8%E5%85%B3%E8%AF%B4%E6%98%8E%2F</url>
     <content type="text"><![CDATA[一. nvm是什么Node 版本的迭代速度很快，版本很多，不同项目对 node 的依赖不同，故需要切换不同 node 版本 目前有 n 和 nvm 这两个工具可以对 Node 进行无痛升级，n 命令是作为一个 node 的模块而存在，而 nvm 是一个独立于 node/npm 的外部 shell 脚本，因此 nvm 命令相比 n 更加全面， n 更有局限性。 nvm 是 Mac 下的 node 管理工具，有点类似管理 Ruby 的 rvm，如果是需要管理 Windows 下的 node，官方推荐是使用 nvmw 或 nvm-windows 。 我按 nvm 提供的文档来完成 nvm 及 node 多个版本的安装,因为在安装过程中遇到不少坑,特在此总结安装中遇到的各种坑 二. 下载安装与使用 nvm 下载nvm-windows 下载地址： nvm-windows选择第一个 nvm-noinstall.zip ，然后解压在系统盘（建议放D盘）。我放的目录路径是 D:\NodeNVM\nvm 。解压出来的文件有：12345+ elevate.cmd+ elevate.vbs+ install.cmd+ LICENSE+ nvm.exe 备注： windows 下要设置显示文件类型的扩展名，这样才能看到上述文件的后缀 nvm 安装双击 install.cmd ，是以控制台形式显示的，第一下直接按回车，然后会在d盘根目录产生 settings.txt ，把这个文件放进刚刚解压的那个目录，然后修改 settings.txt 内容，改成如下：1234root: D:\NodeNVM\nvm path: D:\NodeNVM\nodejs arch: 64 proxy: none 倘若上面方法行不通，因为打开 install.cmd 按下回车后，显示拒绝访问注册表路径，并弹出一个 settings.txt 。此时关掉控制台及文本，在 D:\NodeNVM\nvm 目录里新建一个文件 settings.txt ，然后复制上面的内容即可。1234root ： nvm 的存放地址path ： 存放指向 node 版本的快捷方式，使用 nvm 的过程中会自动生成。一般写的时候与 nvm 同级。arch ： 电脑系统是 64 位就写 64 , 32 位就写 32proxy ： 代理 nvm 环境变量配置以控制台方法执行成功的，在环境变量里会自动配置了 NVM_HOME 和 NVM_SYMLINK 。 直接创建 settings 文件的可以在环境变量里创建 NVM_HOME 和 NVM_SYMLINK，并添加路径。 若环境变量配置有问题，可以直接按下面两种方式来手动配置第一种：右键单击 我的电脑 - 属性 - 高级系统设置 - 高级 -环境变量 - 系统变量 中新建，输入对应变量名，变量值即可12NVM_HOME： D:\NodeNVM\nvmNVM_SYMLINK ：D:\NodeNVM\nodejs 第二种：windows + r 弹出输入框后，输入： sysdm.cpl，同第一种 高级 以后的操作（步骤稍微简单一点点）最后在上面的用户变量中的 PATH 里加上1;%NVM_HOME%;%NVM_SYMLINK%;。 nvm 基本操作打开 cmd 窗口输入命令：nvm -v ，查看当前 nvm 的版本信息。 nvm install latest // 下载最新的 node 版本 v7.2.0 nvm install 8.5.0// 安装不同版本 nvm install 6.11.3 32 // 默认是64位，32位需指定 备注： 如果你的电脑系统是 32 位的，那么在下载 nodejs 版本的时候，一定要指明 32 如： nvm install 5.11.0 32 这样在 32 位的电脑系统中，才可以使用，默认是 64 位的。 nvm uninstall 6.11.0 #卸载对应的版本 nvm use 8.5.0 // 引入使用 nvm list // 查看已安装的 node 版本 nvm ls available//列出远程服务器上所有的可用版本1234 8.5.0 8.0.0 * 6.11.3 (Currently using 64-bit executable)*表示当前正在使用的 node 版本号 每次执行切换的时候，系统都会把 node 的可执行文件链接放到特定版本的文件上。 安装 node第一个坑：安装过 node 版本的,先卸载了在开始看现在的安装流程。第一种方式：使用命令行下载，直接输入：nvm install [版本号]1nvm install 6.11.0 要下载最新版的可以直接输 nvm install latest下载完成后，在控制台输入：nvm use [版本号]123456789nvm use 6.11.3//下面会显示如下内容Now using node v6.11.3 (64-bit)//查看 node 版本是否是自己需要的node -v//显示当面使用版本号即表示毛病了v6.11.3 第二种方式：直接上官网下载所需安装包第二个坑：刚开始我是用命令行的方式安装的 node 所需版本，但是安装的 node 启动项目一直有问题，后同事告知命令行下载的版本很可能丢失文件，导致各种奇怪的问题，直接去官网下载安装包按下面操作流程即可。 下载安装包之后，将文件解压到D:\NodeNVM\nvm中 重命名，按原文件名更改为如下所示即可（严格按如下方式更改名字）12//原文件名 =&gt; 新文件名node-v8.0.0-win-x64 =&gt; v8.0.0 所需要 node 下载完成后，按上面方式查看、切换版本如果你是第一次下载，在 use 之前，D:\NodeNVM目录下是没有 nodejs 这个文件夹的，在输入比如： nvm use 6.11.3 之后，你会发现，D:\NodeNVM 目录下多了一个 nodejs 文件夹，这个文件夹不是单纯的文件夹，它是一个快捷方式，指向了 D:\NodeNVM\nvm 里的 v6.11.3 文件夹。同样的咱们可以下载其他版本的 nodejs ，这样通过命令: nvm use 版本号 比如：nvm use 5.11.0就可以轻松实现版本切换了。注意：切换不同的 node 版本以后，用管理员身份打开命令行，运行 npm -g -d i windows-build-tools ，以解决 window 中某些不能用的命令的问题 二. 安装 cnpm因为 npm 安装插件是从国外服务器下载，受网络影响大，可能出现异常,所以可以使用淘宝开发的淘宝NPM镜像，同步频率目前为 10 分钟 一次。 通过 config 配置指向国内镜像源12npm config set registry http://registry.cnpmjs.org //配置指向源npm info express //下载安装第三方包 通过 npm 命令指定下载源1npm --registry http://registry.cnpmjs.org info express 在配置文件 ~/.npmrc 文件写入源地址12345nano ~/.npmrc //打开配置文件registry =https://registry.npm.taobao.org //写入配置文件npm install -g cnpm --registry=https://registry.npm.taobao.orgnpm install -g cnpm --registry=http://r.cnpmjs.org 三.使用 node 启动项目npm i （npm install 的简写）安装依赖时候，后面加上 -d 可以看到文件安装进程和状态若安装文件中出现状态 304 且报错，直接去 D:\NodeNVM\npm-cache 中，将缓存文件全部删除]]></content>
@@ -61,14 +50,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Git 中 SSH key 生成步骤]]></title>
-    <url>%2F2019%2F03%2F21%2Fgit-sshkey%2F</url>
-    <content type="text"><![CDATA[Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key 第1步：创建SSH Key。 在windows下查看c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控制台中输入以下命令。 1$ ssh-keygen -t rsa -C "youremail@example.com" 密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥。这里使用的是rsa。 同时在密钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息。所以在这里输入自己的邮箱或者其他都行。 输入完毕后程序同时要求输入一个密语字符串(passphrase)，空表示没有密语。接着会让输入2次口令(password)，空表示没有口令。3次回车即可完成当前步骤，此时c盘&gt;用户&gt;自己的用户名&gt;.ssh目录下已经生成好了。 第2步：登录github。 打开setting-&gt;SSH keys，点击右上角 New SSH key，把生成好的公钥id_rsa.pub放进 key输入框中，再为当前的key起一个title来区分每个key。 避免每次都需要输入用户名和密码1$ git config --global credential.helper store]]></content>
+    <title><![CDATA[Cmder 安装笔记]]></title>
+    <url>%2F2019%2F03%2F21%2Fcmder%2F</url>
+    <content type="text"><![CDATA[Cmder 安装笔记Cmder 快捷键 右键管理添加（方法一）下载注册表文件cmder_context_enable.reg123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder] @="Open in Cmder" "Icon"="C:\\cmder\\Cmder.exe,0"[HKEY_CLASSES_ROOT\Directory\Background\shell\cmder\command] @="\"C:\\cmder\\Cmder.exe\" \"%V\""[HKEY_CLASSES_ROOT\Directory\shell\cmder] @="Open in Cmder" "Icon"="C:\\cmder\\Cmder.exe,0"[HKEY_CLASSES_ROOT\Directory\shell\cmder\command] @="\"C:\\cmder\\Cmder.exe\" \"%1\"" 修改注册表中程序目录地址 运行注册表 添加（方法二）1、把 Cmder 加到环境变量 把 Cmder.exe 存放的目录添加到系统环境变量；加完之后, Win+r 一下输入 cmder ,即可。 2、添加 cmder 到右键菜单：环境变量添加后，在任意文件夹中即可打开 Cmder，上一步的把 Cmder 加到环境变量就是为此服务的, 在管理员权限的终端输入以下语句即可: 1Cmder.exe /REGISTER ALL 3、为 Cmder.exe 创建快捷方式，右击 Cmder.exe 选择“创建快捷方式”点击即可，以后打开 Cmder.exe 只要点击桌面对应的快捷方式即可 删除下载注册表文件cmder_context_disable.reg1234Windows Registry Editor Version 5.00[-HKEY_CLASSES_ROOT\Directory\Background\shell\cmder][-HKEY_CLASSES_ROOT\Directory\shell\cmder] 运行注册表 常见问题中文乱码: 进入Settings&gt;Startup&gt;Environment,添加chcp 65001变更为utf-8.重启即可]]></content>
       <categories>
         <category>使用说明</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>Cmder</tag>
       </tags>
   </entry>
   <entry>
@@ -80,6 +69,17 @@
       </categories>
       <tags>
         <tag>Sass</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git 中 SSH key 生成步骤]]></title>
+    <url>%2F2019%2F03%2F21%2Fgit-sshkey%2F</url>
+    <content type="text"><![CDATA[Git 中 SSH key 生成步骤由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key 第1步：创建SSH Key。 在windows下查看c盘-&gt;用户-&gt;自己的用户名-&gt;.ssh下是否有id_rsa、id_rsa.pub文件，如果没有需要手动生成。打开git bash，在控制台中输入以下命令。 1$ ssh-keygen -t rsa -C "youremail@example.com" 密钥类型可以用 -t 选项指定。如果没有指定则默认生成用于SSH-2的RSA密钥。这里使用的是rsa。 同时在密钥中有一个注释字段，用-C来指定所指定的注释，可以方便用户标识这个密钥，指出密钥的用途或其他有用的信息。所以在这里输入自己的邮箱或者其他都行。 输入完毕后程序同时要求输入一个密语字符串(passphrase)，空表示没有密语。接着会让输入2次口令(password)，空表示没有口令。3次回车即可完成当前步骤，此时c盘&gt;用户&gt;自己的用户名&gt;.ssh目录下已经生成好了。 第2步：登录github。 打开setting-&gt;SSH keys，点击右上角 New SSH key，把生成好的公钥id_rsa.pub放进 key输入框中，再为当前的key起一个title来区分每个key。 避免每次都需要输入用户名和密码 第一种方式 1$ git config --global credential.helper store 第二种方式 在本地项目 .git 文件夹中找到 .git/config 修改 aaa: 用户名 bbb: 密码 添加 url = https://aaa:bbb@github.com/LeeXhuan/LeeXhuan.github.io.git如下：123[remote "origin"]url = https://github.com/LeeXhuan/LeeXhuan.github.io.giturl = https://aaa:bbb@github.com/LeeXhuan/LeeXhuan.github.io.git]]></content>
+      <categories>
+        <category>使用说明</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
